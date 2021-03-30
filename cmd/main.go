@@ -47,7 +47,7 @@ var (
 	amountOutMin = 10
 
 	// 钱包地址
-	addr = "0x2abAA18C1C44DF18591A07b8c01b5D8239A79ADC"
+	addr = ""
 	// 钱包地址对应私钥
 	pKey            = ""
 	maxApprove, _   = new(big.Int).SetString("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff", 16)
@@ -55,15 +55,6 @@ var (
 )
 
 func main() {
-
-	// token1 := go_decimal.Decimal.Start("10999914640740819872405094975").MustUnShiftedBy(18).EndForString()
-	// token2 := go_decimal.Decimal.Start("1099809496674660575711873").MustUnShiftedBy(18).EndForString()
-	// logger.Logger.Info("token1", token1)
-	// logger.Logger.Info("token2", token2)
-	// logger.Logger.Info("token2 sub: ", go_decimal.Decimal.Start(token2).Sub("50000").EndForString())
-	// logger.Logger.Info("div", go_decimal.Decimal.Start(token1).DivForString(token2))
-
-	// return
 	wallet, err := coin.NewWallet().InitRemote(coin.UrlParam{RpcUrl: rpcURL})
 	if err != nil {
 		logger.Logger.Error(err)
